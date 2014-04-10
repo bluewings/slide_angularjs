@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>ANGULARJS Presentation</title>	
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/theme/default.css" id="theme">
+<link rel="stylesheet" href="lib/css/zenburn.css">
+<script>
+if (window.location.search.match(/print-pdf/gi)) {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'css/print/pdf.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+}
+</script>
+</head>
+<body style="margin:0">
+<div class="reveal">
+	<div class="slides">
+		<section data-markdown="pbxbp_angularjs.md" data-separator="...page" data-vertical="...more" data-notes="^Note:"></section>
+	</div>
+</div>
+<div style="position:fixed;top:10px;right:10px;z-index:1000">
+	<img src="slides/angularjs/print.png" style="opacity:0.35;cursor:pointer" width="32" height="32" onclick="togglePDF()">
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+<script>
+Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    theme: Reveal.getQueryHash().theme || 'custom',
+    transition: Reveal.getQueryHash().transition || 'default',
+    multiplex: {
+        secret: null,
+        id: '1ea875674b17ca76',
+        url: '10.64.51.102:1948'
+    },
+    dependencies: [{
+        src: 'lib/js/classList.js',
+        condition: function () {
+            return !document.body.classList;
+        }
+    }, {
+        src: 'plugin/markdown/marked.js',
+        condition: function () {
+            return !!document.querySelector('[data-markdown]');
+        }
+    }, {
+        src: 'plugin/markdown/markdown.js',
+        condition: function () {
+            return !!document.querySelector('[data-markdown]');
+        }
+    }, {
+        src: 'plugin/highlight/highlight.js',
+        async: true,
+        callback: function () {
+            hljs.initHighlightingOnLoad();
+        }
+    }, {
+        src: 'plugin/zoom-js/zoom.js',
+        async: true,
+        condition: function () {
+            return !!document.body.classList;
+        }
+    }, {
+        src: 'plugin/notes/notes.js',
+        async: true,
+        condition: function () {
+            return !!document.body.classList;
+        }
+    }, {
+        src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js',
+        async: true
+    }, {
+        src: 'plugin/multiplex/client.js',
+        async: true
+    }]
+});
+
+function togglePDF() {
+
+    var search = location.search;
+
+    if (search.match(/print-pdf/gi)) {
+        search = search.replace(/print-pdf/g, '');
+    } else {
+        search = (search ? search : '?') + 'print-pdf';
+    }
+    if (search == '?') {
+        search = '';
+    }
+    location.href = location.origin + location.pathname + search + location.hash;
+}
+</script>
+<style>
+p > img {margin:0 !important;}
+</style>
+</body>
+</html>

@@ -1,0 +1,11 @@
+label{font-weight:400;}
+.done-true{text-decoration:line-through;color:grey;}
+.list-group{margin-bottom:65px;box-shadow:0 0 1px 1px rgba(64,64,64,0.3)!important;}
+.list-group-item{background-color:rgba(255,255,255,0.85);padding:5px 10px;}
+.list-group-item .pull-right .glyphicon{font-size:16px;top:6px;color:#666;}
+.well{margin-bottom:15px;background-color:rgba(255,255,255,0.5);border:none;box-shadow:0 0 1px 1px rgba(64,64,64,0.3);padding:10px;}
+html{background-image:url(http://10.64.51.102/reveal.js/slides/angularjs/todo_bg.jpg);background-size:cover;background-position:50% 0;height:100%;}
+body{background-color:transparent;}
+input[type=text]{background-color:rgba(0,0,0,0.5);color:#fff;border:none;box-shadow:0 0 1px 1px rgba(64,64,64,0.3);}
+form.input-group{position:fixed;bottom:0;left:0;right:0;border:none;padding:15px;}
+.count{font-family:Georgia;font-weight:700;font-size:14px;display:inline-block;margin-right:3px;}
